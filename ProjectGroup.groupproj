@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9F7AAD5C-96CD-4364-BCE0-D887B7D40D71}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="hl2mp_server_manager.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="hl2mp_server_manager">
+        <MSBuild Projects="hl2mp_server_manager.dproj"/>
+    </Target>
+    <Target Name="hl2mp_server_manager:Clean">
+        <MSBuild Projects="hl2mp_server_manager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="hl2mp_server_manager:Make">
+        <MSBuild Projects="hl2mp_server_manager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="hl2mp_server_manager"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="hl2mp_server_manager:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="hl2mp_server_manager:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
