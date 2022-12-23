@@ -146,7 +146,7 @@ object ServerManagerForm: TServerManagerForm
         object ebHost: TEdit
           Left = 72
           Top = 32
-          Width = 301
+          Width = 299
           Height = 23
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 1
@@ -156,7 +156,7 @@ object ServerManagerForm: TServerManagerForm
         object ebPort: TEdit
           Left = 72
           Top = 61
-          Width = 301
+          Width = 299
           Height = 23
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 2
@@ -166,7 +166,7 @@ object ServerManagerForm: TServerManagerForm
         object ebPassword: TEdit
           Left = 72
           Top = 90
-          Width = 301
+          Width = 299
           Height = 23
           Anchors = [akLeft, akTop, akRight]
           PasswordChar = '*'
@@ -177,7 +177,7 @@ object ServerManagerForm: TServerManagerForm
         object mDescription: TMemo
           Left = 72
           Top = 120
-          Width = 301
+          Width = 299
           Height = 89
           Anchors = [akLeft, akTop, akRight]
           ScrollBars = ssVertical
@@ -186,7 +186,7 @@ object ServerManagerForm: TServerManagerForm
           ExplicitWidth = 303
         end
         object bSaveChanges: TButton
-          Left = 252
+          Left = 250
           Top = 330
           Width = 121
           Height = 25
@@ -200,7 +200,7 @@ object ServerManagerForm: TServerManagerForm
         object ebName: TEdit
           Left = 72
           Top = 3
-          Width = 301
+          Width = 299
           Height = 23
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0

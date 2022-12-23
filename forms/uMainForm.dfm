@@ -83,8 +83,6 @@ object MainForm: TMainForm
     ParentBackground = True
     ParentColor = False
     TabOrder = 2
-    ExplicitLeft = 469
-    ExplicitHeight = 367
     object tvCommands: TTreeView
       Left = 0
       Top = 22

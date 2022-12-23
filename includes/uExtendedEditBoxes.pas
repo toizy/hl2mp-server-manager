@@ -4,7 +4,7 @@ interface
 
 uses
 	Winapi.Windows,
-    Winapi.ShLwApi
+	Winapi.ShLwApi
     ;
 
 procedure EnableAutoAppend(Handle: HWND);

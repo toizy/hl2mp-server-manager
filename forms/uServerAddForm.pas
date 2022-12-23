@@ -3,8 +3,8 @@ unit uServerAddForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+	Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+	Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
 	TServerAddForm = class(TForm)
@@ -41,23 +41,23 @@ uses uExtendedEditBoxes;
 procedure TServerAddForm.FormCreate(Sender: TObject);
 begin
 	EnableAutoAppend(ebName.Handle);
-    EnableAutoAppend(ebHost.Handle);
-    EnableAutoAppend(ebPort.Handle);
-    EnableAutoAppend(ebPassword.Handle);
+	EnableAutoAppend(ebHost.Handle);
+	EnableAutoAppend(ebPort.Handle);
+	EnableAutoAppend(ebPassword.Handle);
 end;
 
 procedure TServerAddForm.bOkClick(Sender: TObject);
 begin
-    ModalResult := mrOk;
+	ModalResult := mrOk;
 end;
 
 procedure TServerAddForm.ebPortKeyPress(Sender: TObject; var Key: Char);
 begin
 	case Ord(Key) of
-        48..57, 08:;
-    else
-	    Key := #0;
-    end;
+		48 .. 57, 08:;
+	else
+		Key := #0;
+	end;
 end;
 
 end.
