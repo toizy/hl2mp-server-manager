@@ -106,6 +106,7 @@ object MainForm: TMainForm
       Height = 22
       Align = alTop
       Style = csSimple
+      DropDownCount = 30
       TabOrder = 1
     end
   end
