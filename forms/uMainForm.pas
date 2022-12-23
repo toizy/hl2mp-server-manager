@@ -1,11 +1,10 @@
-unit uMainForm;
+﻿unit uMainForm;
 
 interface
 
 uses
     Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-    Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls,
-    uCommonConsts;
+    Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls;
 
 type
     TMainForm = class(TForm)
@@ -48,21 +47,27 @@ var
 implementation
 
 uses
-    uServerManagerForm;
+    uServerManagerForm, uCommonConsts, uAppSettings, uExtendedEditBoxes;
 
 {$R *.dfm}
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
-    cbFindCommand.TextHint := T_FINDCOMMAND_HINT;
-    cbCommand.TextHint := T_COMMAND_CB_HINT;
+    cbFindCommand.TextHint := T_HINT_FINDCOMMAND;
+    cbCommand.TextHint := T_HINT_COMMAND_COMBOBOX;
 end;
 
 procedure TMainForm.ManageClick(Sender: TObject);
 begin
     ServerManagerForm := TServerManagerForm.Create(MainForm);
-    ServerManagerForm.ShowModal;
-    ServerManagerForm.Free;
+    try
+	    if (ServerManagerForm.ShowModal = mrOk) then
+        begin
+            ShowMessage('Connecting');
+        end;
+    finally
+    	ServerManagerForm.Free;
+    end;
 end;
 
 end.
